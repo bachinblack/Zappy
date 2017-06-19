@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Data
 {
-    static public int mapSize = 0;
+    static public int mapSize = 10;
 }
 
 public class launchGame : MonoBehaviour {

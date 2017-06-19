@@ -87,6 +87,7 @@
     <Compile Include="Assets\BrunetonsOcean\Scripts\Projection.cs" />
     <Compile Include="Assets\BrunetonsOcean\Scripts\RTUtility.cs" />
     <Compile Include="Assets\BrunetonsOcean\Scripts\WaveSpectrumGPU.cs" />
+    <Compile Include="Assets\Scripts\MoveSun.cs" />
     <Compile Include="Assets\Scripts\instance.cs" />
     <Compile Include="Assets\Scripts\launchGame.cs" />
   </ItemGroup>
