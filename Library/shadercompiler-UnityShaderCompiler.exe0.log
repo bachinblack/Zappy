@@ -1,34 +1,10 @@
 Base path: D:/code/Editor/Data
 Cmd: initializeCompiler
-Cmd: preprocess
-  insize=5506 outsize=980 ok=1
-Cmd: preprocess
-  insize=2525 outsize=284 ok=1
-Cmd: preprocess
-  insize=1143 outsize=245 ok=1
-Cmd: preprocess
-  insize=1646 outsize=306 ok=1
-Cmd: preprocess
-  insize=1674 outsize=286 ok=1
-Cmd: preprocess
-  insize=8172 outsize=2081 ok=1
-Cmd: compileCompute
-  api=4 insize=4129 outsize=8333 ok=1
-Cmd: compileCompute
-  api=4 insize=4129 outsize=8333 ok=1
-Cmd: compileCompute
-  api=4 insize=3203 outsize=5705 ok=1
-Cmd: compileCompute
-  api=4 insize=1757 outsize=2873 ok=1
-Cmd: compileCompute
-  api=4 insize=3203 outsize=5705 ok=1
-Cmd: preprocess
-  insize=5506 outsize=980 ok=1
-Cmd: preprocess
-  insize=2525 outsize=284 ok=1
-Cmd: preprocess
-  insize=1143 outsize=245 ok=1
-Cmd: preprocess
-  insize=1646 outsize=306 ok=1
-Cmd: preprocess
-  insize=1674 outsize=286 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1093 outsize=2234 kw=DIRECTIONAL _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1093 outsize=7106 kw=DIRECTIONAL _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=981 outsize=2050 kw=DIRECTIONAL _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=981 outsize=3690 kw=DIRECTIONAL _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
