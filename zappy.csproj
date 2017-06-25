@@ -94,8 +94,10 @@
     <Compile Include="Assets\BrunetonsOcean\Scripts\RTUtility.cs" />
     <Compile Include="Assets\BrunetonsOcean\Scripts\WaveSpectrumGPU.cs" />
     <Compile Include="Assets\Scripts\MoveSun.cs" />
+    <Compile Include="Assets\Scripts\displace.cs" />
     <Compile Include="Assets\Scripts\instance.cs" />
     <Compile Include="Assets\Scripts\launchGame.cs" />
+    <Compile Include="Assets\Scripts\setPos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BrunetonsAtmosphere\Shaders\Atmosphere.cginc" />
