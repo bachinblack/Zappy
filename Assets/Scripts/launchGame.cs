@@ -1,9 +1,21 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Data
 {
+    static public RandCol col = new RandCol();
     static public int mapSize = 10;
+    static public List<GameObject> CharactersList = new List<GameObject>();
+}
+
+public class RandCol
+{
+    System.Random r;
+
+    void Start() { r = new System.Random(); }
+
+    public Color getRandomColor() { return new Color(r.Next(0, 255), r.Next(0, 255), r.Next(0, 255)); }
 }
 
 public class launchGame : MonoBehaviour {

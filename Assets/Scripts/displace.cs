@@ -18,6 +18,12 @@ public class displace : MonoBehaviour {
         UpdateTarget(new Vector3(5, 7.5F, 25));
     }
 	
+
+    public void setPos(Vector3 pos)
+    {
+        transform.position = pos;
+    }
+
     public void UpdateTarget(Vector3 target)
     {
         requiredPos = target;

@@ -19,24 +19,24 @@ Platform assembly: D:\code\unity\zappy\Zappy\Zappy_Data\Managed\UnityEngine.Netw
 Loading D:\code\unity\zappy\Zappy\Zappy_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: D:\code\unity\zappy\Zappy\Zappy_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading D:\code\unity\zappy\Zappy\Zappy_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.143 seconds
+- Completed reload, in  0.121 seconds
 Platform assembly: D:\code\unity\zappy\Zappy\Zappy_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\code\unity\zappy\Zappy\Zappy_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.208806 ms
+UnloadTime: 3.180981 ms
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 1780 -> priority: 1 
-  Thread -> id: 21fc -> priority: 1 
-  Thread -> id: 3198 -> priority: 1 
-  Thread -> id: 3b50 -> priority: 1 
+  Thread -> id: 1154 -> priority: 1 
+  Thread -> id: bfc -> priority: 1 
+  Thread -> id: 20e4 -> priority: 1 
+  Thread -> id: 2270 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.382199 ms
+UnloadTime: 0.557298 ms
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 449.
-Total: 6.958956 ms (FindLiveObjects: 0.032255 ms CreateObjectMapping: 0.018175 ms MarkObjects: 0.221947 ms  DeleteObjects: 6.685809 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 503.
+Total: 7.093592 ms (FindLiveObjects: 0.035583 ms CreateObjectMapping: 0.023551 ms MarkObjects: 0.194555 ms  DeleteObjects: 6.839134 ms)
 
 IsolatedStorageException: Could not find a part of the path "D:\code\unity\zappy\Zappy\Zappy_Data\BrunetonsAtmosphere\Textures\transmittance.raw".
   at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
