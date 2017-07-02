@@ -20,5 +20,6 @@ public class MoveSun : MonoBehaviour {
         else if (pos.x < 90F && pos.y != 20)
             pos.y = 20;
         transform.rotation = Quaternion.Euler(pos);
+        Data.Update();
     }
 }

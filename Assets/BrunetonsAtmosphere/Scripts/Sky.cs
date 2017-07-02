@@ -96,7 +96,14 @@ namespace BrunetonsAtmosphere
 
         private void Update()
         {
-            Vector3 pos = Camera.main.transform.position;
+            Vector3 pos;
+
+            if (Data.camType == 1)
+            {
+                return;
+            }
+            else
+                pos = Camera.main.transform.position;
             pos.y = 0.0f;
 
             //centre sky dome at player pos
