@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class SkyCamInputs : MonoBehaviour {
 
@@ -8,6 +8,11 @@ public class SkyCamInputs : MonoBehaviour {
     }
 
     void Update () {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            GameObject.Find("FPSController").GetComponent<FirstPersonController>().m_MouseLook.lockCursor = false;
+            SceneManager.LoadScene("End");
+        }
         if (Input.GetKeyDown(KeyCode.V))
         {
             if (Data.camType == 0)

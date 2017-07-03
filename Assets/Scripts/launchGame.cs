@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Text;
 using System.Runtime.InteropServices;
-using System;
 
 public class Data
 {
@@ -85,6 +84,7 @@ public class Data
 
     private static unsafe void pnw(int* i)
     {
+        Debug.Log("new player!!");
         GameObject nw = disp.inst(Characters[0], new Vector3(15, 7.5F, 5), Quaternion.identity);
         displace d = nw.GetComponent<displace>();
 
@@ -105,11 +105,12 @@ public class Data
     {
         int* tab;
         int max = 0;
-     
 
+        Debug.Log("gettin updates");
         while ((tab = treatment()) != null)
         {
             Debug.Log("New update!");
+            Debug.Log(tab[0]);
             if (++max == 20)
                 break;
             ptr[tab[0]](tab);
@@ -133,15 +134,6 @@ public class Data
         ptr[6] = new Deleg(seg);
         ptr[7] = new Deleg(sgt);
 
-        for (ushort x = 0; x < (mapX); ++x)
-        {
-            for (ushort y = 0; y < (mapY); ++y)
-            {
-                Items.Add(GameObject.Instantiate(Sample, new Vector3(x * 10F, 0F, y * 10F), Sample.transform.rotation));
-            }
-        }
-
-
         int** tab = null;
         int* size;
 
@@ -157,9 +149,15 @@ public class Data
             mapY = size[1];
         }
 
+        for (ushort x = 0; x < (mapX); ++x)
+        {
+            for (ushort y = 0; y < (mapY); ++y)
+            {
+                Items.Add(GameObject.Instantiate(Sample, new Vector3(x * 10F, 0F, y * 10F), Sample.transform.rotation));
+            }
+        }
         // Change items pos when abort succeed
 
-        Debug.Log(Items.Count);
         float scale;
         Transform[] children = Items[0].GetComponentsInChildren<Transform>();
         List<Transform> RealChildren = new List<Transform>();
@@ -179,7 +177,6 @@ public class Data
                 }
             }
 			scale = tab[i][1] * 0.3F;
-            Debug.Log(scale);
             if (scale == 0)
                 scale = 0.1F;
 			RealChildren[tab[i][0]].localScale = new Vector3(scale, scale, scale);
