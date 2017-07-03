@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class displace : MonoBehaviour {
 
-    private float speed = 2F;
+    private float speed = 5F;
     private Vector3 requiredPos = new Vector3(5, 0, 5);
     private Animator anim;
     private bool walking = false;
-    private int id = -1;
+    private int id;
     private int level = 0;
     private int team = 0;
     public int tile;
@@ -25,7 +25,7 @@ public class displace : MonoBehaviour {
 
     void Start () {
         anim = GetComponent<Animator>();
-        id = -1;
+        anim.SetFloat("Speed", 0);
     }
 
     public void setId(int nid) { id = nid; }

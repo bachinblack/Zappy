@@ -27,12 +27,12 @@ public class Data
 
     public static GameObject   getPlayer(int i)
     {
-        foreach (GameObject obj in Characters)
+        for (int j = 1; j < Characters.Count; ++j)
         {
-           if (obj.GetComponent<displace>().getId() == i)
-               return obj;
+            if (Characters[j].GetComponent<displace>().getId() == i)
+                return Characters[j];
         }
-        return Characters[0];
+        return Characters[1];
     }
 
     public static Egg getEgg(int i)
@@ -84,18 +84,21 @@ public class Data
 
     private static unsafe void pnw(int* i)
     {
-        Debug.Log("new player!!");
         GameObject nw = disp.inst(Characters[0], new Vector3(15, 7.5F, 5), Quaternion.identity);
         displace d = nw.GetComponent<displace>();
 
-
         d.setId(i[1]);
+        d.tile = i[2] * mapX + i[3];
         d.setPos(new Vector3(i[2] * 10 + 5, 7.5F, i[3] * 10 + 5));
         d.setRot(new Quaternion(0, i[4] * 90F, 0, 0));
         Characters.Add(nw);
     }
 
-    private static unsafe void ppo(int* i) { getPlayer(i[1]).GetComponent<displace>().UpdateTarget(new Vector3(i[2] * 10 + 5, 7.5F, i[3] * 10 + 5)); getPlayer(i[1]).GetComponent<displace>().tile = i[2] * mapX + i[3]; }
+    private static unsafe void ppo(int* i) {
+        getPlayer(i[1]).GetComponent<displace>().UpdateTarget(new Vector3(i[2] * 10 + 5, 7.5F, i[3] * 10 + 5));
+        getPlayer(i[1]).GetComponent<displace>().setRot(new Quaternion(0, i[4] * 60F, 0, 0));
+        getPlayer(i[1]).GetComponent<displace>().tile = i[2] * mapX + i[3];
+    }
 
     private static unsafe void seg(int* i) { GameObject.Find("FPSController").GetComponent<FirstPersonController>().m_MouseLook.lockCursor = false; SceneManager.LoadScene("End"); }
 
@@ -106,11 +109,8 @@ public class Data
         int* tab;
         int max = 0;
 
-        Debug.Log("gettin updates");
         while ((tab = treatment()) != null)
         {
-            Debug.Log("New update!");
-            Debug.Log(tab[0]);
             if (++max == 20)
                 break;
             ptr[tab[0]](tab);
@@ -176,9 +176,7 @@ public class Data
                   RealChildren.Add(child);
                 }
             }
-			scale = tab[i][1] * 0.3F;
-            if (scale == 0)
-                scale = 0.1F;
+			scale = tab[i][1] * 0.3F + .1F;
 			RealChildren[tab[i][0]].localScale = new Vector3(scale, scale, scale);
 		}
 
