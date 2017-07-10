@@ -8,3 +8,4 @@ this interface is available for windows and linux and works with a server availa
 the .dll / .so needed to run this application is a container for the network layer of the project
 (For the project, the network layer HAD to be done in C)
 
+I did not work on the server, neither on the AI, but i did the unity work by myself.
